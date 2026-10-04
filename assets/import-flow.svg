@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="450" viewBox="0 0 1200 450">
+<rect width="1200" height="450" fill="#f5f7fb"/>
+<text x="40" y="58" font-family="Arial, sans-serif" font-size="30" fill="#17243a">CSV import: separate decoding, validation and inference</text>
+<rect x="40" y="110" width="244" height="133" rx="14" fill="white" stroke="#d5deeb" stroke-width="2"/>
+<text x="57" y="150" font-family="Arial, sans-serif" font-size="24" fill="#286a77">1. Decode</text>
+<text x="57" y="191" font-family="Arial, sans-serif" font-size="18" fill="#17243a">cp932 / utf-8-sig</text>
+<text x="57" y="220" font-family="Arial, sans-serif" font-size="18" fill="#17243a">Strict; no guessing</text>
+<path d="M293 177h26m-9 -7l9 7-9 7" stroke="#286a77" fill="none" stroke-width="3"/>
+<rect x="332" y="110" width="244" height="133" rx="14" fill="white" stroke="#d5deeb" stroke-width="2"/>
+<text x="349" y="150" font-family="Arial, sans-serif" font-size="24" fill="#286a77">2. Structure</text>
+<text x="349" y="191" font-family="Arial, sans-serif" font-size="18" fill="#17243a">Header and row widths</text>
+<text x="349" y="220" font-family="Arial, sans-serif" font-size="18" fill="#17243a">Parse quoted newlines</text>
+<path d="M585 177h26m-9 -7l9 7-9 7" stroke="#286a77" fill="none" stroke-width="3"/>
+<rect x="624" y="110" width="244" height="133" rx="14" fill="white" stroke="#d5deeb" stroke-width="2"/>
+<text x="641" y="150" font-family="Arial, sans-serif" font-size="24" fill="#286a77">3. Identifier</text>
+<text x="641" y="191" font-family="Arial, sans-serif" font-size="18" fill="#17243a">Nonempty; unique</text>
+<text x="641" y="220" font-family="Arial, sans-serif" font-size="18" fill="#17243a">Keep the raw string</text>
+<path d="M877 177h26m-9 -7l9 7-9 7" stroke="#286a77" fill="none" stroke-width="3"/>
+<rect x="916" y="110" width="244" height="133" rx="14" fill="white" stroke="#d5deeb" stroke-width="2"/>
+<text x="933" y="150" font-family="Arial, sans-serif" font-size="24" fill="#286a77">4. Import</text>
+<text x="933" y="191" font-family="Arial, sans-serif" font-size="18" fill="#17243a">Explicit dtype</text>
+<text x="933" y="220" font-family="Arial, sans-serif" font-size="18" fill="#17243a">Explicit NA policy</text>
+<text x="40" y="298" font-family="Arial, sans-serif" font-size="21" fill="#17243a">001234 -&gt; 1234 under default numeric inference (numeric-only fixture)</text>
+<text x="40" y="334" font-family="Arial, sans-serif" font-size="21" fill="#17243a">NA -&gt; &lt;NA&gt; even with string dtype; disable default NA parsing to keep it</text>
+<text x="40" y="401" font-family="Arial, sans-serif" font-size="21" fill="#286a77">A successful validation does not set your downstream pandas options.</text>
+</svg>
