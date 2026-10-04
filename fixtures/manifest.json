@@ -1,0 +1,357 @@
+{
+  "schema_version": 1,
+  "synthetic_only": true,
+  "cases": [
+    {
+      "case_id": "numeric_cp932",
+      "file": "numeric_cp932.csv",
+      "encoding": "cp932",
+      "bytes": 55,
+      "sha256": "b66811a566505c699f0e6c8ae6c04589afc35df5dd9125a3c4323f80bf90d64f",
+      "expected_ids": [
+        "001234",
+        "000007"
+      ],
+      "expected_error_count": 0,
+      "expected_warning_count": 2,
+      "expected_error_codes": [],
+      "expected_warning_codes": [
+        "W_LEADING_ZERO"
+      ]
+    },
+    {
+      "case_id": "na_cp932",
+      "file": "na_cp932.csv",
+      "encoding": "cp932",
+      "bytes": 64,
+      "sha256": "fddc5a0cedd050dbfe2e1ed90737027b4bc0a5790f8f9465d81c61c136aa786d",
+      "expected_ids": [
+        "NA",
+        "N/A",
+        "NULL",
+        "A001"
+      ],
+      "expected_error_count": 0,
+      "expected_warning_count": 3,
+      "expected_error_codes": [],
+      "expected_warning_codes": [
+        "W_NA_LITERAL"
+      ]
+    },
+    {
+      "case_id": "mixed_cp932",
+      "file": "mixed_cp932.csv",
+      "encoding": "cp932",
+      "bytes": 55,
+      "sha256": "b34a4249873ba6fc92f5d033bc4565e622846eece10563fe8de7fd97dc27b498",
+      "expected_ids": [
+        "001234",
+        "NA",
+        "A001"
+      ],
+      "expected_error_count": 0,
+      "expected_warning_count": 2,
+      "expected_error_codes": [],
+      "expected_warning_codes": [
+        "W_LEADING_ZERO",
+        "W_NA_LITERAL"
+      ]
+    },
+    {
+      "case_id": "utf8_bom",
+      "file": "utf8_bom.csv",
+      "encoding": "utf-8-sig",
+      "bytes": 65,
+      "sha256": "66442195f1087d58acb6fffa4152312f37a180bf7cef604700f1441c49e51145",
+      "expected_ids": [
+        "001234",
+        "A001"
+      ],
+      "expected_error_count": 0,
+      "expected_warning_count": 1,
+      "expected_error_codes": [],
+      "expected_warning_codes": [
+        "W_LEADING_ZERO"
+      ]
+    },
+    {
+      "case_id": "utf8_no_bom",
+      "file": "utf8_no_bom.csv",
+      "encoding": "utf-8-sig",
+      "bytes": 62,
+      "sha256": "dd18613d5de2986e9566eeb48200c753edb3ac63730817843af92ff55b217a75",
+      "expected_ids": [
+        "001234",
+        "A001"
+      ],
+      "expected_error_count": 0,
+      "expected_warning_count": 1,
+      "expected_error_codes": [],
+      "expected_warning_codes": [
+        "W_LEADING_ZERO"
+      ]
+    },
+    {
+      "case_id": "cp932_extension",
+      "file": "cp932_extension.csv",
+      "encoding": "cp932",
+      "bytes": 36,
+      "sha256": "d6d601753ef3e9d2838604da02d5f5ce3e0faa0b0c70bd1367d7f37ad316dd30",
+      "expected_ids": [
+        "A001"
+      ],
+      "expected_error_count": 0,
+      "expected_warning_count": 0,
+      "expected_error_codes": [],
+      "expected_warning_codes": []
+    },
+    {
+      "case_id": "quoted",
+      "file": "quoted.csv",
+      "encoding": "cp932",
+      "bytes": 79,
+      "sha256": "646cabc083c5e2b04b4cf95f04084e3a1395005ee28e70abe1da25b4eabf8780",
+      "expected_ids": [
+        "A001",
+        "A002",
+        "A003"
+      ],
+      "expected_error_count": 0,
+      "expected_warning_count": 0,
+      "expected_error_codes": [],
+      "expected_warning_codes": []
+    },
+    {
+      "case_id": "empty_header",
+      "file": "empty_header.csv",
+      "encoding": "cp932",
+      "bytes": 25,
+      "sha256": "e985c68f68841a2120cdafe2559c66eb815bcd77216621b29679d113f0a3239b",
+      "expected_ids": null,
+      "expected_error_count": 1,
+      "expected_warning_count": 0,
+      "expected_error_codes": [
+        "E_EMPTY_HEADER"
+      ],
+      "expected_warning_codes": []
+    },
+    {
+      "case_id": "duplicate_header",
+      "file": "duplicate_header.csv",
+      "encoding": "cp932",
+      "bytes": 34,
+      "sha256": "46c4c002b7d873e36bff0e30910d6d8205bd9899d69bde89025ffd5a593568b1",
+      "expected_ids": null,
+      "expected_error_count": 1,
+      "expected_warning_count": 0,
+      "expected_error_codes": [
+        "E_DUPLICATE_HEADER"
+      ],
+      "expected_warning_codes": []
+    },
+    {
+      "case_id": "missing_id_column",
+      "file": "missing_id_column.csv",
+      "encoding": "cp932",
+      "bytes": 27,
+      "sha256": "ef68916b124ac0e355e94fe3307a4c4bc6670214578b2fd01555595c77572605",
+      "expected_ids": null,
+      "expected_error_count": 1,
+      "expected_warning_count": 0,
+      "expected_error_codes": [
+        "E_ID_COLUMN_MISSING"
+      ],
+      "expected_warning_codes": []
+    },
+    {
+      "case_id": "short_row",
+      "file": "short_row.csv",
+      "encoding": "cp932",
+      "bytes": 25,
+      "sha256": "a03f10d824f6f612f9e33aea41a8ea259e62860c771835aa344529e619247583",
+      "expected_ids": null,
+      "expected_error_count": 1,
+      "expected_warning_count": 0,
+      "expected_error_codes": [
+        "E_COLUMN_COUNT"
+      ],
+      "expected_warning_codes": []
+    },
+    {
+      "case_id": "long_row",
+      "file": "long_row.csv",
+      "encoding": "cp932",
+      "bytes": 36,
+      "sha256": "60d16d6d54ff6032007ad3ff61ed3984d299bbe5f7f291bafb9bc49f0a2b0497",
+      "expected_ids": null,
+      "expected_error_count": 1,
+      "expected_warning_count": 0,
+      "expected_error_codes": [
+        "E_COLUMN_COUNT"
+      ],
+      "expected_warning_codes": []
+    },
+    {
+      "case_id": "empty_ids",
+      "file": "empty_ids.csv",
+      "encoding": "cp932",
+      "bytes": 38,
+      "sha256": "eb03c0e034dec029b3991d867eec9fab949370d8f652d66eb0dcb7126a538bec",
+      "expected_ids": [
+        "",
+        "   "
+      ],
+      "expected_error_count": 2,
+      "expected_warning_count": 0,
+      "expected_error_codes": [
+        "E_EMPTY_ID"
+      ],
+      "expected_warning_codes": []
+    },
+    {
+      "case_id": "whitespace_id",
+      "file": "whitespace_id.csv",
+      "encoding": "cp932",
+      "bytes": 45,
+      "sha256": "b0e1baca557ed30d270047365c27b1f7dce6bd3fe7004a218047c4aa42a5157b",
+      "expected_ids": [
+        " A001 ",
+        "A001"
+      ],
+      "expected_error_count": 0,
+      "expected_warning_count": 1,
+      "expected_error_codes": [],
+      "expected_warning_codes": [
+        "W_ID_WHITESPACE"
+      ]
+    },
+    {
+      "case_id": "duplicate_id",
+      "file": "duplicate_id.csv",
+      "encoding": "cp932",
+      "bytes": 43,
+      "sha256": "833106b890d9f0e430a7a78648b72b04d771bf0dab052ded410c106bcd42699f",
+      "expected_ids": [
+        "A001",
+        "A001"
+      ],
+      "expected_error_count": 1,
+      "expected_warning_count": 0,
+      "expected_error_codes": [
+        "E_DUPLICATE_ID"
+      ],
+      "expected_warning_codes": []
+    },
+    {
+      "case_id": "distinct_zero_ids",
+      "file": "distinct_zero_ids.csv",
+      "encoding": "cp932",
+      "bytes": 39,
+      "sha256": "cfb1371ce87404cf458f8f6ec9f1a90a76783228e1652ae09e805c3558fbeb49",
+      "expected_ids": [
+        "001",
+        "1"
+      ],
+      "expected_error_count": 0,
+      "expected_warning_count": 1,
+      "expected_error_codes": [],
+      "expected_warning_codes": [
+        "W_LEADING_ZERO"
+      ]
+    },
+    {
+      "case_id": "empty_file",
+      "file": "empty_file.csv",
+      "encoding": "cp932",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected_ids": null,
+      "expected_error_count": 1,
+      "expected_warning_count": 0,
+      "expected_error_codes": [
+        "E_EMPTY_FILE"
+      ],
+      "expected_warning_codes": []
+    },
+    {
+      "case_id": "header_only",
+      "file": "header_only.csv",
+      "encoding": "cp932",
+      "bytes": 19,
+      "sha256": "bed7de0d98040f569c6516fbe1d27e2bcb88a1be004e67dd463ec96f3dcbc74e",
+      "expected_ids": [],
+      "expected_error_count": 1,
+      "expected_warning_count": 0,
+      "expected_error_codes": [
+        "E_NO_DATA"
+      ],
+      "expected_warning_codes": []
+    },
+    {
+      "case_id": "blank_record",
+      "file": "blank_record.csv",
+      "encoding": "cp932",
+      "bytes": 45,
+      "sha256": "bbcec0343b9bc8705979ae660a8196428ab27ce7a567424bd9020deffc56a714",
+      "expected_ids": null,
+      "expected_error_count": 1,
+      "expected_warning_count": 0,
+      "expected_error_codes": [
+        "E_COLUMN_COUNT"
+      ],
+      "expected_warning_codes": []
+    },
+    {
+      "case_id": "invalid_bytes",
+      "file": "invalid_bytes.csv",
+      "encoding": "cp932",
+      "bytes": 25,
+      "sha256": "ccf515621dc32b8d62ad10dd88272e7e34a38f76006c097d93e65b39424e183a",
+      "expected_ids": null,
+      "expected_error_count": 1,
+      "expected_warning_count": 0,
+      "expected_error_codes": [
+        "E_ENCODING"
+      ],
+      "expected_warning_codes": []
+    },
+    {
+      "case_id": "unclosed_quote",
+      "file": "unclosed_quote.csv",
+      "encoding": "cp932",
+      "bytes": 31,
+      "sha256": "ddc9194bbc24de39b5093344e2184c35e31c4956820afbfdf6707a04a70225f9",
+      "expected_ids": null,
+      "expected_error_count": 1,
+      "expected_warning_count": 0,
+      "expected_error_codes": [
+        "E_CSV_SYNTAX"
+      ],
+      "expected_warning_codes": []
+    },
+    {
+      "case_id": "literal_edges",
+      "file": "literal_edges.csv",
+      "encoding": "cp932",
+      "bytes": 120,
+      "sha256": "3283c0a179a43dcb07db20f4b53e038c88c370b67f965666c2ff3ab0ce4a5f8a",
+      "expected_ids": [
+        "0",
+        "0000",
+        "NA",
+        "na",
+        "００１",
+        "=1+1",
+        "$(echo DO_NOT_EXECUTE)"
+      ],
+      "expected_error_count": 0,
+      "expected_warning_count": 2,
+      "expected_error_codes": [],
+      "expected_warning_codes": [
+        "W_LEADING_ZERO",
+        "W_NA_LITERAL"
+      ]
+    }
+  ],
+  "large_boundary_cases": "generated in temporary directories by tests"
+}
