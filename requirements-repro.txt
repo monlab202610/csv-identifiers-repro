@@ -1,0 +1,2 @@
+# Only reproduce.py needs pandas. check_csv.py/tests use the standard library.
+pandas==2.2.3

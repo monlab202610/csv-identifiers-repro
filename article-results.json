@@ -1,0 +1,1667 @@
+{
+  "schema_version": 1,
+  "synthetic_only": true,
+  "environment": {
+    "python": "3.12.14",
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "platform": "macOS-27.0.1-arm64-arm-64bit"
+  },
+  "cases": [
+    {
+      "case_id": "numeric_cp932",
+      "fixture_sha256": "b66811a566505c699f0e6c8ae6c04589afc35df5dd9125a3c4323f80bf90d64f",
+      "checker": {
+        "schema_version": 1,
+        "status": "ok",
+        "scan_complete": true,
+        "rows_checked": 2,
+        "error_count": 0,
+        "warning_count": 2,
+        "findings": [
+          {
+            "code": "W_LEADING_ZERO",
+            "severity": "warning",
+            "record_number": 2,
+            "physical_line_end": 2,
+            "column_index": 1
+          },
+          {
+            "code": "W_LEADING_ZERO",
+            "severity": "warning",
+            "record_number": 3,
+            "physical_line_end": 3,
+            "column_index": 1
+          }
+        ],
+        "findings_truncated": false
+      },
+      "checker_exit_code": 0,
+      "expected_ids": [
+        "001234",
+        "000007"
+      ],
+      "modes": {
+        "pandas_default": {
+          "dtype": "int64",
+          "values": [
+            {
+              "repr": "1234",
+              "is_missing": false,
+              "text": "1234",
+              "python_type": "int"
+            },
+            {
+              "repr": "7",
+              "is_missing": false,
+              "text": "7",
+              "python_type": "int"
+            }
+          ],
+          "preserved_count": 0,
+          "input_id_count": 2
+        },
+        "pandas_string_only": {
+          "dtype": "string",
+          "values": [
+            {
+              "repr": "'001234'",
+              "is_missing": false,
+              "text": "001234",
+              "python_type": "str"
+            },
+            {
+              "repr": "'000007'",
+              "is_missing": false,
+              "text": "000007",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 2,
+          "input_id_count": 2
+        },
+        "pandas_string_no_default_na": {
+          "dtype": "string",
+          "values": [
+            {
+              "repr": "'001234'",
+              "is_missing": false,
+              "text": "001234",
+              "python_type": "str"
+            },
+            {
+              "repr": "'000007'",
+              "is_missing": false,
+              "text": "000007",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 2,
+          "input_id_count": 2
+        },
+        "csv_reader": {
+          "dtype": "str",
+          "values": [
+            {
+              "repr": "'001234'",
+              "is_missing": false,
+              "text": "001234",
+              "python_type": "str"
+            },
+            {
+              "repr": "'000007'",
+              "is_missing": false,
+              "text": "000007",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 2,
+          "input_id_count": 2
+        }
+      }
+    },
+    {
+      "case_id": "na_cp932",
+      "fixture_sha256": "fddc5a0cedd050dbfe2e1ed90737027b4bc0a5790f8f9465d81c61c136aa786d",
+      "checker": {
+        "schema_version": 1,
+        "status": "ok",
+        "scan_complete": true,
+        "rows_checked": 4,
+        "error_count": 0,
+        "warning_count": 3,
+        "findings": [
+          {
+            "code": "W_NA_LITERAL",
+            "severity": "warning",
+            "record_number": 2,
+            "physical_line_end": 2,
+            "column_index": 1
+          },
+          {
+            "code": "W_NA_LITERAL",
+            "severity": "warning",
+            "record_number": 3,
+            "physical_line_end": 3,
+            "column_index": 1
+          },
+          {
+            "code": "W_NA_LITERAL",
+            "severity": "warning",
+            "record_number": 4,
+            "physical_line_end": 4,
+            "column_index": 1
+          }
+        ],
+        "findings_truncated": false
+      },
+      "checker_exit_code": 0,
+      "expected_ids": [
+        "NA",
+        "N/A",
+        "NULL",
+        "A001"
+      ],
+      "modes": {
+        "pandas_default": {
+          "dtype": "object",
+          "values": [
+            {
+              "repr": "nan",
+              "is_missing": true,
+              "text": null,
+              "python_type": "float"
+            },
+            {
+              "repr": "nan",
+              "is_missing": true,
+              "text": null,
+              "python_type": "float"
+            },
+            {
+              "repr": "nan",
+              "is_missing": true,
+              "text": null,
+              "python_type": "float"
+            },
+            {
+              "repr": "'A001'",
+              "is_missing": false,
+              "text": "A001",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 1,
+          "input_id_count": 4
+        },
+        "pandas_string_only": {
+          "dtype": "string",
+          "values": [
+            {
+              "repr": "<NA>",
+              "is_missing": true,
+              "text": null,
+              "python_type": "NAType"
+            },
+            {
+              "repr": "<NA>",
+              "is_missing": true,
+              "text": null,
+              "python_type": "NAType"
+            },
+            {
+              "repr": "<NA>",
+              "is_missing": true,
+              "text": null,
+              "python_type": "NAType"
+            },
+            {
+              "repr": "'A001'",
+              "is_missing": false,
+              "text": "A001",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 1,
+          "input_id_count": 4
+        },
+        "pandas_string_no_default_na": {
+          "dtype": "string",
+          "values": [
+            {
+              "repr": "'NA'",
+              "is_missing": false,
+              "text": "NA",
+              "python_type": "str"
+            },
+            {
+              "repr": "'N/A'",
+              "is_missing": false,
+              "text": "N/A",
+              "python_type": "str"
+            },
+            {
+              "repr": "'NULL'",
+              "is_missing": false,
+              "text": "NULL",
+              "python_type": "str"
+            },
+            {
+              "repr": "'A001'",
+              "is_missing": false,
+              "text": "A001",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 4,
+          "input_id_count": 4
+        },
+        "csv_reader": {
+          "dtype": "str",
+          "values": [
+            {
+              "repr": "'NA'",
+              "is_missing": false,
+              "text": "NA",
+              "python_type": "str"
+            },
+            {
+              "repr": "'N/A'",
+              "is_missing": false,
+              "text": "N/A",
+              "python_type": "str"
+            },
+            {
+              "repr": "'NULL'",
+              "is_missing": false,
+              "text": "NULL",
+              "python_type": "str"
+            },
+            {
+              "repr": "'A001'",
+              "is_missing": false,
+              "text": "A001",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 4,
+          "input_id_count": 4
+        }
+      }
+    },
+    {
+      "case_id": "mixed_cp932",
+      "fixture_sha256": "b34a4249873ba6fc92f5d033bc4565e622846eece10563fe8de7fd97dc27b498",
+      "checker": {
+        "schema_version": 1,
+        "status": "ok",
+        "scan_complete": true,
+        "rows_checked": 3,
+        "error_count": 0,
+        "warning_count": 2,
+        "findings": [
+          {
+            "code": "W_LEADING_ZERO",
+            "severity": "warning",
+            "record_number": 2,
+            "physical_line_end": 2,
+            "column_index": 1
+          },
+          {
+            "code": "W_NA_LITERAL",
+            "severity": "warning",
+            "record_number": 3,
+            "physical_line_end": 3,
+            "column_index": 1
+          }
+        ],
+        "findings_truncated": false
+      },
+      "checker_exit_code": 0,
+      "expected_ids": [
+        "001234",
+        "NA",
+        "A001"
+      ],
+      "modes": {
+        "pandas_default": {
+          "dtype": "object",
+          "values": [
+            {
+              "repr": "'001234'",
+              "is_missing": false,
+              "text": "001234",
+              "python_type": "str"
+            },
+            {
+              "repr": "nan",
+              "is_missing": true,
+              "text": null,
+              "python_type": "float"
+            },
+            {
+              "repr": "'A001'",
+              "is_missing": false,
+              "text": "A001",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 2,
+          "input_id_count": 3
+        },
+        "pandas_string_only": {
+          "dtype": "string",
+          "values": [
+            {
+              "repr": "'001234'",
+              "is_missing": false,
+              "text": "001234",
+              "python_type": "str"
+            },
+            {
+              "repr": "<NA>",
+              "is_missing": true,
+              "text": null,
+              "python_type": "NAType"
+            },
+            {
+              "repr": "'A001'",
+              "is_missing": false,
+              "text": "A001",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 2,
+          "input_id_count": 3
+        },
+        "pandas_string_no_default_na": {
+          "dtype": "string",
+          "values": [
+            {
+              "repr": "'001234'",
+              "is_missing": false,
+              "text": "001234",
+              "python_type": "str"
+            },
+            {
+              "repr": "'NA'",
+              "is_missing": false,
+              "text": "NA",
+              "python_type": "str"
+            },
+            {
+              "repr": "'A001'",
+              "is_missing": false,
+              "text": "A001",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 3,
+          "input_id_count": 3
+        },
+        "csv_reader": {
+          "dtype": "str",
+          "values": [
+            {
+              "repr": "'001234'",
+              "is_missing": false,
+              "text": "001234",
+              "python_type": "str"
+            },
+            {
+              "repr": "'NA'",
+              "is_missing": false,
+              "text": "NA",
+              "python_type": "str"
+            },
+            {
+              "repr": "'A001'",
+              "is_missing": false,
+              "text": "A001",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 3,
+          "input_id_count": 3
+        }
+      }
+    },
+    {
+      "case_id": "utf8_bom",
+      "fixture_sha256": "66442195f1087d58acb6fffa4152312f37a180bf7cef604700f1441c49e51145",
+      "checker": {
+        "schema_version": 1,
+        "status": "ok",
+        "scan_complete": true,
+        "rows_checked": 2,
+        "error_count": 0,
+        "warning_count": 1,
+        "findings": [
+          {
+            "code": "W_LEADING_ZERO",
+            "severity": "warning",
+            "record_number": 2,
+            "physical_line_end": 2,
+            "column_index": 1
+          }
+        ],
+        "findings_truncated": false
+      },
+      "checker_exit_code": 0,
+      "expected_ids": [
+        "001234",
+        "A001"
+      ],
+      "modes": {
+        "pandas_default": {
+          "dtype": "object",
+          "values": [
+            {
+              "repr": "'001234'",
+              "is_missing": false,
+              "text": "001234",
+              "python_type": "str"
+            },
+            {
+              "repr": "'A001'",
+              "is_missing": false,
+              "text": "A001",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 2,
+          "input_id_count": 2
+        },
+        "pandas_string_only": {
+          "dtype": "string",
+          "values": [
+            {
+              "repr": "'001234'",
+              "is_missing": false,
+              "text": "001234",
+              "python_type": "str"
+            },
+            {
+              "repr": "'A001'",
+              "is_missing": false,
+              "text": "A001",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 2,
+          "input_id_count": 2
+        },
+        "pandas_string_no_default_na": {
+          "dtype": "string",
+          "values": [
+            {
+              "repr": "'001234'",
+              "is_missing": false,
+              "text": "001234",
+              "python_type": "str"
+            },
+            {
+              "repr": "'A001'",
+              "is_missing": false,
+              "text": "A001",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 2,
+          "input_id_count": 2
+        },
+        "csv_reader": {
+          "dtype": "str",
+          "values": [
+            {
+              "repr": "'001234'",
+              "is_missing": false,
+              "text": "001234",
+              "python_type": "str"
+            },
+            {
+              "repr": "'A001'",
+              "is_missing": false,
+              "text": "A001",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 2,
+          "input_id_count": 2
+        }
+      }
+    },
+    {
+      "case_id": "utf8_no_bom",
+      "fixture_sha256": "dd18613d5de2986e9566eeb48200c753edb3ac63730817843af92ff55b217a75",
+      "checker": {
+        "schema_version": 1,
+        "status": "ok",
+        "scan_complete": true,
+        "rows_checked": 2,
+        "error_count": 0,
+        "warning_count": 1,
+        "findings": [
+          {
+            "code": "W_LEADING_ZERO",
+            "severity": "warning",
+            "record_number": 2,
+            "physical_line_end": 2,
+            "column_index": 1
+          }
+        ],
+        "findings_truncated": false
+      },
+      "checker_exit_code": 0,
+      "expected_ids": [
+        "001234",
+        "A001"
+      ],
+      "modes": {
+        "pandas_default": {
+          "dtype": "object",
+          "values": [
+            {
+              "repr": "'001234'",
+              "is_missing": false,
+              "text": "001234",
+              "python_type": "str"
+            },
+            {
+              "repr": "'A001'",
+              "is_missing": false,
+              "text": "A001",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 2,
+          "input_id_count": 2
+        },
+        "pandas_string_only": {
+          "dtype": "string",
+          "values": [
+            {
+              "repr": "'001234'",
+              "is_missing": false,
+              "text": "001234",
+              "python_type": "str"
+            },
+            {
+              "repr": "'A001'",
+              "is_missing": false,
+              "text": "A001",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 2,
+          "input_id_count": 2
+        },
+        "pandas_string_no_default_na": {
+          "dtype": "string",
+          "values": [
+            {
+              "repr": "'001234'",
+              "is_missing": false,
+              "text": "001234",
+              "python_type": "str"
+            },
+            {
+              "repr": "'A001'",
+              "is_missing": false,
+              "text": "A001",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 2,
+          "input_id_count": 2
+        },
+        "csv_reader": {
+          "dtype": "str",
+          "values": [
+            {
+              "repr": "'001234'",
+              "is_missing": false,
+              "text": "001234",
+              "python_type": "str"
+            },
+            {
+              "repr": "'A001'",
+              "is_missing": false,
+              "text": "A001",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 2,
+          "input_id_count": 2
+        }
+      }
+    },
+    {
+      "case_id": "cp932_extension",
+      "fixture_sha256": "d6d601753ef3e9d2838604da02d5f5ce3e0faa0b0c70bd1367d7f37ad316dd30",
+      "checker": {
+        "schema_version": 1,
+        "status": "ok",
+        "scan_complete": true,
+        "rows_checked": 1,
+        "error_count": 0,
+        "warning_count": 0,
+        "findings": [],
+        "findings_truncated": false
+      },
+      "checker_exit_code": 0,
+      "expected_ids": [
+        "A001"
+      ],
+      "modes": {
+        "pandas_default": {
+          "dtype": "object",
+          "values": [
+            {
+              "repr": "'A001'",
+              "is_missing": false,
+              "text": "A001",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 1,
+          "input_id_count": 1
+        },
+        "pandas_string_only": {
+          "dtype": "string",
+          "values": [
+            {
+              "repr": "'A001'",
+              "is_missing": false,
+              "text": "A001",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 1,
+          "input_id_count": 1
+        },
+        "pandas_string_no_default_na": {
+          "dtype": "string",
+          "values": [
+            {
+              "repr": "'A001'",
+              "is_missing": false,
+              "text": "A001",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 1,
+          "input_id_count": 1
+        },
+        "csv_reader": {
+          "dtype": "str",
+          "values": [
+            {
+              "repr": "'A001'",
+              "is_missing": false,
+              "text": "A001",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 1,
+          "input_id_count": 1
+        }
+      }
+    },
+    {
+      "case_id": "quoted",
+      "fixture_sha256": "646cabc083c5e2b04b4cf95f04084e3a1395005ee28e70abe1da25b4eabf8780",
+      "checker": {
+        "schema_version": 1,
+        "status": "ok",
+        "scan_complete": true,
+        "rows_checked": 3,
+        "error_count": 0,
+        "warning_count": 0,
+        "findings": [],
+        "findings_truncated": false
+      },
+      "checker_exit_code": 0,
+      "expected_ids": [
+        "A001",
+        "A002",
+        "A003"
+      ],
+      "modes": {
+        "pandas_default": {
+          "dtype": "object",
+          "values": [
+            {
+              "repr": "'A001'",
+              "is_missing": false,
+              "text": "A001",
+              "python_type": "str"
+            },
+            {
+              "repr": "'A002'",
+              "is_missing": false,
+              "text": "A002",
+              "python_type": "str"
+            },
+            {
+              "repr": "'A003'",
+              "is_missing": false,
+              "text": "A003",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 3,
+          "input_id_count": 3
+        },
+        "pandas_string_only": {
+          "dtype": "string",
+          "values": [
+            {
+              "repr": "'A001'",
+              "is_missing": false,
+              "text": "A001",
+              "python_type": "str"
+            },
+            {
+              "repr": "'A002'",
+              "is_missing": false,
+              "text": "A002",
+              "python_type": "str"
+            },
+            {
+              "repr": "'A003'",
+              "is_missing": false,
+              "text": "A003",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 3,
+          "input_id_count": 3
+        },
+        "pandas_string_no_default_na": {
+          "dtype": "string",
+          "values": [
+            {
+              "repr": "'A001'",
+              "is_missing": false,
+              "text": "A001",
+              "python_type": "str"
+            },
+            {
+              "repr": "'A002'",
+              "is_missing": false,
+              "text": "A002",
+              "python_type": "str"
+            },
+            {
+              "repr": "'A003'",
+              "is_missing": false,
+              "text": "A003",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 3,
+          "input_id_count": 3
+        },
+        "csv_reader": {
+          "dtype": "str",
+          "values": [
+            {
+              "repr": "'A001'",
+              "is_missing": false,
+              "text": "A001",
+              "python_type": "str"
+            },
+            {
+              "repr": "'A002'",
+              "is_missing": false,
+              "text": "A002",
+              "python_type": "str"
+            },
+            {
+              "repr": "'A003'",
+              "is_missing": false,
+              "text": "A003",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 3,
+          "input_id_count": 3
+        }
+      }
+    },
+    {
+      "case_id": "empty_header",
+      "fixture_sha256": "e985c68f68841a2120cdafe2559c66eb815bcd77216621b29679d113f0a3239b",
+      "checker": {
+        "schema_version": 1,
+        "status": "error",
+        "scan_complete": false,
+        "rows_checked": 0,
+        "error_count": 1,
+        "warning_count": 0,
+        "findings": [
+          {
+            "code": "E_EMPTY_HEADER",
+            "severity": "error",
+            "record_number": 1,
+            "physical_line_end": 1,
+            "column_index": 2
+          }
+        ],
+        "findings_truncated": false
+      },
+      "checker_exit_code": 1
+    },
+    {
+      "case_id": "duplicate_header",
+      "fixture_sha256": "46c4c002b7d873e36bff0e30910d6d8205bd9899d69bde89025ffd5a593568b1",
+      "checker": {
+        "schema_version": 1,
+        "status": "error",
+        "scan_complete": false,
+        "rows_checked": 0,
+        "error_count": 1,
+        "warning_count": 0,
+        "findings": [
+          {
+            "code": "E_DUPLICATE_HEADER",
+            "severity": "error",
+            "record_number": 1,
+            "physical_line_end": 1,
+            "column_index": 2
+          }
+        ],
+        "findings_truncated": false
+      },
+      "checker_exit_code": 1
+    },
+    {
+      "case_id": "missing_id_column",
+      "fixture_sha256": "ef68916b124ac0e355e94fe3307a4c4bc6670214578b2fd01555595c77572605",
+      "checker": {
+        "schema_version": 1,
+        "status": "error",
+        "scan_complete": false,
+        "rows_checked": 0,
+        "error_count": 1,
+        "warning_count": 0,
+        "findings": [
+          {
+            "code": "E_ID_COLUMN_MISSING",
+            "severity": "error",
+            "record_number": 1,
+            "physical_line_end": 1,
+            "column_index": null
+          }
+        ],
+        "findings_truncated": false
+      },
+      "checker_exit_code": 1
+    },
+    {
+      "case_id": "short_row",
+      "fixture_sha256": "a03f10d824f6f612f9e33aea41a8ea259e62860c771835aa344529e619247583",
+      "checker": {
+        "schema_version": 1,
+        "status": "error",
+        "scan_complete": true,
+        "rows_checked": 1,
+        "error_count": 1,
+        "warning_count": 0,
+        "findings": [
+          {
+            "code": "E_COLUMN_COUNT",
+            "severity": "error",
+            "record_number": 2,
+            "physical_line_end": 2,
+            "column_index": null
+          }
+        ],
+        "findings_truncated": false
+      },
+      "checker_exit_code": 1
+    },
+    {
+      "case_id": "long_row",
+      "fixture_sha256": "60d16d6d54ff6032007ad3ff61ed3984d299bbe5f7f291bafb9bc49f0a2b0497",
+      "checker": {
+        "schema_version": 1,
+        "status": "error",
+        "scan_complete": true,
+        "rows_checked": 1,
+        "error_count": 1,
+        "warning_count": 0,
+        "findings": [
+          {
+            "code": "E_COLUMN_COUNT",
+            "severity": "error",
+            "record_number": 2,
+            "physical_line_end": 2,
+            "column_index": null
+          }
+        ],
+        "findings_truncated": false
+      },
+      "checker_exit_code": 1
+    },
+    {
+      "case_id": "empty_ids",
+      "fixture_sha256": "eb03c0e034dec029b3991d867eec9fab949370d8f652d66eb0dcb7126a538bec",
+      "checker": {
+        "schema_version": 1,
+        "status": "error",
+        "scan_complete": true,
+        "rows_checked": 2,
+        "error_count": 2,
+        "warning_count": 0,
+        "findings": [
+          {
+            "code": "E_EMPTY_ID",
+            "severity": "error",
+            "record_number": 2,
+            "physical_line_end": 2,
+            "column_index": 1
+          },
+          {
+            "code": "E_EMPTY_ID",
+            "severity": "error",
+            "record_number": 3,
+            "physical_line_end": 3,
+            "column_index": 1
+          }
+        ],
+        "findings_truncated": false
+      },
+      "checker_exit_code": 1,
+      "expected_ids": [
+        "",
+        "   "
+      ],
+      "modes": {
+        "pandas_default": {
+          "dtype": "object",
+          "values": [
+            {
+              "repr": "nan",
+              "is_missing": true,
+              "text": null,
+              "python_type": "float"
+            },
+            {
+              "repr": "'   '",
+              "is_missing": false,
+              "text": "   ",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 1,
+          "input_id_count": 2
+        },
+        "pandas_string_only": {
+          "dtype": "string",
+          "values": [
+            {
+              "repr": "<NA>",
+              "is_missing": true,
+              "text": null,
+              "python_type": "NAType"
+            },
+            {
+              "repr": "'   '",
+              "is_missing": false,
+              "text": "   ",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 1,
+          "input_id_count": 2
+        },
+        "pandas_string_no_default_na": {
+          "dtype": "string",
+          "values": [
+            {
+              "repr": "''",
+              "is_missing": false,
+              "text": "",
+              "python_type": "str"
+            },
+            {
+              "repr": "'   '",
+              "is_missing": false,
+              "text": "   ",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 2,
+          "input_id_count": 2
+        },
+        "csv_reader": {
+          "dtype": "str",
+          "values": [
+            {
+              "repr": "''",
+              "is_missing": false,
+              "text": "",
+              "python_type": "str"
+            },
+            {
+              "repr": "'   '",
+              "is_missing": false,
+              "text": "   ",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 2,
+          "input_id_count": 2
+        }
+      }
+    },
+    {
+      "case_id": "whitespace_id",
+      "fixture_sha256": "b0e1baca557ed30d270047365c27b1f7dce6bd3fe7004a218047c4aa42a5157b",
+      "checker": {
+        "schema_version": 1,
+        "status": "ok",
+        "scan_complete": true,
+        "rows_checked": 2,
+        "error_count": 0,
+        "warning_count": 1,
+        "findings": [
+          {
+            "code": "W_ID_WHITESPACE",
+            "severity": "warning",
+            "record_number": 2,
+            "physical_line_end": 2,
+            "column_index": 1
+          }
+        ],
+        "findings_truncated": false
+      },
+      "checker_exit_code": 0,
+      "expected_ids": [
+        " A001 ",
+        "A001"
+      ],
+      "modes": {
+        "pandas_default": {
+          "dtype": "object",
+          "values": [
+            {
+              "repr": "' A001 '",
+              "is_missing": false,
+              "text": " A001 ",
+              "python_type": "str"
+            },
+            {
+              "repr": "'A001'",
+              "is_missing": false,
+              "text": "A001",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 2,
+          "input_id_count": 2
+        },
+        "pandas_string_only": {
+          "dtype": "string",
+          "values": [
+            {
+              "repr": "' A001 '",
+              "is_missing": false,
+              "text": " A001 ",
+              "python_type": "str"
+            },
+            {
+              "repr": "'A001'",
+              "is_missing": false,
+              "text": "A001",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 2,
+          "input_id_count": 2
+        },
+        "pandas_string_no_default_na": {
+          "dtype": "string",
+          "values": [
+            {
+              "repr": "' A001 '",
+              "is_missing": false,
+              "text": " A001 ",
+              "python_type": "str"
+            },
+            {
+              "repr": "'A001'",
+              "is_missing": false,
+              "text": "A001",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 2,
+          "input_id_count": 2
+        },
+        "csv_reader": {
+          "dtype": "str",
+          "values": [
+            {
+              "repr": "' A001 '",
+              "is_missing": false,
+              "text": " A001 ",
+              "python_type": "str"
+            },
+            {
+              "repr": "'A001'",
+              "is_missing": false,
+              "text": "A001",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 2,
+          "input_id_count": 2
+        }
+      }
+    },
+    {
+      "case_id": "duplicate_id",
+      "fixture_sha256": "833106b890d9f0e430a7a78648b72b04d771bf0dab052ded410c106bcd42699f",
+      "checker": {
+        "schema_version": 1,
+        "status": "error",
+        "scan_complete": true,
+        "rows_checked": 2,
+        "error_count": 1,
+        "warning_count": 0,
+        "findings": [
+          {
+            "code": "E_DUPLICATE_ID",
+            "severity": "error",
+            "record_number": 3,
+            "physical_line_end": 3,
+            "column_index": 1
+          }
+        ],
+        "findings_truncated": false
+      },
+      "checker_exit_code": 1
+    },
+    {
+      "case_id": "distinct_zero_ids",
+      "fixture_sha256": "cfb1371ce87404cf458f8f6ec9f1a90a76783228e1652ae09e805c3558fbeb49",
+      "checker": {
+        "schema_version": 1,
+        "status": "ok",
+        "scan_complete": true,
+        "rows_checked": 2,
+        "error_count": 0,
+        "warning_count": 1,
+        "findings": [
+          {
+            "code": "W_LEADING_ZERO",
+            "severity": "warning",
+            "record_number": 2,
+            "physical_line_end": 2,
+            "column_index": 1
+          }
+        ],
+        "findings_truncated": false
+      },
+      "checker_exit_code": 0,
+      "expected_ids": [
+        "001",
+        "1"
+      ],
+      "modes": {
+        "pandas_default": {
+          "dtype": "int64",
+          "values": [
+            {
+              "repr": "1",
+              "is_missing": false,
+              "text": "1",
+              "python_type": "int"
+            },
+            {
+              "repr": "1",
+              "is_missing": false,
+              "text": "1",
+              "python_type": "int"
+            }
+          ],
+          "preserved_count": 1,
+          "input_id_count": 2
+        },
+        "pandas_string_only": {
+          "dtype": "string",
+          "values": [
+            {
+              "repr": "'001'",
+              "is_missing": false,
+              "text": "001",
+              "python_type": "str"
+            },
+            {
+              "repr": "'1'",
+              "is_missing": false,
+              "text": "1",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 2,
+          "input_id_count": 2
+        },
+        "pandas_string_no_default_na": {
+          "dtype": "string",
+          "values": [
+            {
+              "repr": "'001'",
+              "is_missing": false,
+              "text": "001",
+              "python_type": "str"
+            },
+            {
+              "repr": "'1'",
+              "is_missing": false,
+              "text": "1",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 2,
+          "input_id_count": 2
+        },
+        "csv_reader": {
+          "dtype": "str",
+          "values": [
+            {
+              "repr": "'001'",
+              "is_missing": false,
+              "text": "001",
+              "python_type": "str"
+            },
+            {
+              "repr": "'1'",
+              "is_missing": false,
+              "text": "1",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 2,
+          "input_id_count": 2
+        }
+      }
+    },
+    {
+      "case_id": "empty_file",
+      "fixture_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "checker": {
+        "schema_version": 1,
+        "status": "error",
+        "scan_complete": true,
+        "rows_checked": 0,
+        "error_count": 1,
+        "warning_count": 0,
+        "findings": [
+          {
+            "code": "E_EMPTY_FILE",
+            "severity": "error",
+            "record_number": null,
+            "physical_line_end": null,
+            "column_index": null
+          }
+        ],
+        "findings_truncated": false
+      },
+      "checker_exit_code": 1
+    },
+    {
+      "case_id": "header_only",
+      "fixture_sha256": "bed7de0d98040f569c6516fbe1d27e2bcb88a1be004e67dd463ec96f3dcbc74e",
+      "checker": {
+        "schema_version": 1,
+        "status": "error",
+        "scan_complete": true,
+        "rows_checked": 0,
+        "error_count": 1,
+        "warning_count": 0,
+        "findings": [
+          {
+            "code": "E_NO_DATA",
+            "severity": "error",
+            "record_number": 1,
+            "physical_line_end": 1,
+            "column_index": null
+          }
+        ],
+        "findings_truncated": false
+      },
+      "checker_exit_code": 1
+    },
+    {
+      "case_id": "blank_record",
+      "fixture_sha256": "bbcec0343b9bc8705979ae660a8196428ab27ce7a567424bd9020deffc56a714",
+      "checker": {
+        "schema_version": 1,
+        "status": "error",
+        "scan_complete": true,
+        "rows_checked": 3,
+        "error_count": 1,
+        "warning_count": 0,
+        "findings": [
+          {
+            "code": "E_COLUMN_COUNT",
+            "severity": "error",
+            "record_number": 3,
+            "physical_line_end": 3,
+            "column_index": null
+          }
+        ],
+        "findings_truncated": false
+      },
+      "checker_exit_code": 1
+    },
+    {
+      "case_id": "invalid_bytes",
+      "fixture_sha256": "ccf515621dc32b8d62ad10dd88272e7e34a38f76006c097d93e65b39424e183a",
+      "checker": {
+        "schema_version": 1,
+        "status": "incomplete",
+        "scan_complete": false,
+        "rows_checked": 0,
+        "error_count": 1,
+        "warning_count": 0,
+        "findings": [
+          {
+            "code": "E_ENCODING",
+            "severity": "error",
+            "record_number": null,
+            "physical_line_end": null,
+            "column_index": null
+          }
+        ],
+        "findings_truncated": false
+      },
+      "checker_exit_code": 2
+    },
+    {
+      "case_id": "unclosed_quote",
+      "fixture_sha256": "ddc9194bbc24de39b5093344e2184c35e31c4956820afbfdf6707a04a70225f9",
+      "checker": {
+        "schema_version": 1,
+        "status": "incomplete",
+        "scan_complete": false,
+        "rows_checked": 0,
+        "error_count": 1,
+        "warning_count": 0,
+        "findings": [
+          {
+            "code": "E_CSV_SYNTAX",
+            "severity": "error",
+            "record_number": 2,
+            "physical_line_end": 2,
+            "column_index": null
+          }
+        ],
+        "findings_truncated": false
+      },
+      "checker_exit_code": 1
+    },
+    {
+      "case_id": "literal_edges",
+      "fixture_sha256": "3283c0a179a43dcb07db20f4b53e038c88c370b67f965666c2ff3ab0ce4a5f8a",
+      "checker": {
+        "schema_version": 1,
+        "status": "ok",
+        "scan_complete": true,
+        "rows_checked": 7,
+        "error_count": 0,
+        "warning_count": 2,
+        "findings": [
+          {
+            "code": "W_LEADING_ZERO",
+            "severity": "warning",
+            "record_number": 3,
+            "physical_line_end": 3,
+            "column_index": 1
+          },
+          {
+            "code": "W_NA_LITERAL",
+            "severity": "warning",
+            "record_number": 4,
+            "physical_line_end": 4,
+            "column_index": 1
+          }
+        ],
+        "findings_truncated": false
+      },
+      "checker_exit_code": 0,
+      "expected_ids": [
+        "0",
+        "0000",
+        "NA",
+        "na",
+        "００１",
+        "=1+1",
+        "$(echo DO_NOT_EXECUTE)"
+      ],
+      "modes": {
+        "pandas_default": {
+          "dtype": "object",
+          "values": [
+            {
+              "repr": "'0'",
+              "is_missing": false,
+              "text": "0",
+              "python_type": "str"
+            },
+            {
+              "repr": "'0000'",
+              "is_missing": false,
+              "text": "0000",
+              "python_type": "str"
+            },
+            {
+              "repr": "nan",
+              "is_missing": true,
+              "text": null,
+              "python_type": "float"
+            },
+            {
+              "repr": "'na'",
+              "is_missing": false,
+              "text": "na",
+              "python_type": "str"
+            },
+            {
+              "repr": "'００１'",
+              "is_missing": false,
+              "text": "００１",
+              "python_type": "str"
+            },
+            {
+              "repr": "'=1+1'",
+              "is_missing": false,
+              "text": "=1+1",
+              "python_type": "str"
+            },
+            {
+              "repr": "'$(echo DO_NOT_EXECUTE)'",
+              "is_missing": false,
+              "text": "$(echo DO_NOT_EXECUTE)",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 6,
+          "input_id_count": 7
+        },
+        "pandas_string_only": {
+          "dtype": "string",
+          "values": [
+            {
+              "repr": "'0'",
+              "is_missing": false,
+              "text": "0",
+              "python_type": "str"
+            },
+            {
+              "repr": "'0000'",
+              "is_missing": false,
+              "text": "0000",
+              "python_type": "str"
+            },
+            {
+              "repr": "<NA>",
+              "is_missing": true,
+              "text": null,
+              "python_type": "NAType"
+            },
+            {
+              "repr": "'na'",
+              "is_missing": false,
+              "text": "na",
+              "python_type": "str"
+            },
+            {
+              "repr": "'００１'",
+              "is_missing": false,
+              "text": "００１",
+              "python_type": "str"
+            },
+            {
+              "repr": "'=1+1'",
+              "is_missing": false,
+              "text": "=1+1",
+              "python_type": "str"
+            },
+            {
+              "repr": "'$(echo DO_NOT_EXECUTE)'",
+              "is_missing": false,
+              "text": "$(echo DO_NOT_EXECUTE)",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 6,
+          "input_id_count": 7
+        },
+        "pandas_string_no_default_na": {
+          "dtype": "string",
+          "values": [
+            {
+              "repr": "'0'",
+              "is_missing": false,
+              "text": "0",
+              "python_type": "str"
+            },
+            {
+              "repr": "'0000'",
+              "is_missing": false,
+              "text": "0000",
+              "python_type": "str"
+            },
+            {
+              "repr": "'NA'",
+              "is_missing": false,
+              "text": "NA",
+              "python_type": "str"
+            },
+            {
+              "repr": "'na'",
+              "is_missing": false,
+              "text": "na",
+              "python_type": "str"
+            },
+            {
+              "repr": "'００１'",
+              "is_missing": false,
+              "text": "００１",
+              "python_type": "str"
+            },
+            {
+              "repr": "'=1+1'",
+              "is_missing": false,
+              "text": "=1+1",
+              "python_type": "str"
+            },
+            {
+              "repr": "'$(echo DO_NOT_EXECUTE)'",
+              "is_missing": false,
+              "text": "$(echo DO_NOT_EXECUTE)",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 7,
+          "input_id_count": 7
+        },
+        "csv_reader": {
+          "dtype": "str",
+          "values": [
+            {
+              "repr": "'0'",
+              "is_missing": false,
+              "text": "0",
+              "python_type": "str"
+            },
+            {
+              "repr": "'0000'",
+              "is_missing": false,
+              "text": "0000",
+              "python_type": "str"
+            },
+            {
+              "repr": "'NA'",
+              "is_missing": false,
+              "text": "NA",
+              "python_type": "str"
+            },
+            {
+              "repr": "'na'",
+              "is_missing": false,
+              "text": "na",
+              "python_type": "str"
+            },
+            {
+              "repr": "'００１'",
+              "is_missing": false,
+              "text": "００１",
+              "python_type": "str"
+            },
+            {
+              "repr": "'=1+1'",
+              "is_missing": false,
+              "text": "=1+1",
+              "python_type": "str"
+            },
+            {
+              "repr": "'$(echo DO_NOT_EXECUTE)'",
+              "is_missing": false,
+              "text": "$(echo DO_NOT_EXECUTE)",
+              "python_type": "str"
+            }
+          ],
+          "preserved_count": 7,
+          "input_id_count": 7
+        }
+      }
+    }
+  ],
+  "extension_shift_jis_decodes": false,
+  "quoted_physical_lines": 5,
+  "quoted_data_records": 3,
+  "per_column_na_example": {
+    "ids": [
+      {
+        "repr": "'NA'",
+        "is_missing": false,
+        "text": "NA",
+        "python_type": "str"
+      },
+      {
+        "repr": "'001234'",
+        "is_missing": false,
+        "text": "001234",
+        "python_type": "str"
+      }
+    ],
+    "first_name_missing": true
+  },
+  "limits": "not a benchmark; all inputs synthetic; no network during execution"
+}
